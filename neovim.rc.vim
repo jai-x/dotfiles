@@ -152,3 +152,10 @@ augroup vim_ft
 	autocmd Filetype vim setlocal shiftwidth=4
 	autocmd Filetype vim setlocal expandtab
 augroup end
+
+augroup javascript_ft
+	autocmd!
+	autocmd Filetype javascript setlocal tabstop=2
+	autocmd Filetype javascript setlocal shiftwidth=2
+	autocmd Filetype javascript setlocal expandtab
+augroup end
