@@ -108,6 +108,7 @@ augroup terminal_ft
 	autocmd TermOpen * setlocal nonumber
 	autocmd TermOpen * setlocal winfixheight
 	autocmd TermOpen * setlocal winfixwidth
+	autocmd TermOpen * setlocal scrolloff=0
 augroup end
 
 augroup python_ft
