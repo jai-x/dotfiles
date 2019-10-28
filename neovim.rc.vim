@@ -99,64 +99,73 @@ let g:NERDTreeWinSize=35
 " ---- Filetype specific configuration ----
 
 augroup nerdtree_ft
-	autocmd!
-	autocmd Filetype nerdtree setlocal nocursorcolumn
+    autocmd!
+    autocmd Filetype nerdtree setlocal nocursorcolumn
 augroup end
 
 augroup terminal_ft
-	autocmd!
-	autocmd TermOpen * setlocal nonumber
-	autocmd TermOpen * setlocal winfixheight
-	autocmd TermOpen * setlocal winfixwidth
-	autocmd TermOpen * setlocal scrolloff=0
+    autocmd!
+    autocmd TermOpen * setlocal nonumber
+    autocmd TermOpen * setlocal winfixheight
+    autocmd TermOpen * setlocal winfixwidth
+    autocmd TermOpen * setlocal scrolloff=0
 augroup end
 
 augroup python_ft
-	autocmd!
-	autocmd Filetype python setlocal tabstop=4
-	autocmd Filetype python setlocal shiftwidth=4
-	autocmd Filetype python setlocal expandtab
+    autocmd!
+    autocmd Filetype python setlocal tabstop=4
+    autocmd Filetype python setlocal shiftwidth=4
+    autocmd Filetype python setlocal expandtab
 augroup end
 
 augroup markdown_ft
-	autocmd!
-	autocmd Filetype markdown setlocal tabstop=2
-	autocmd Filetype markdown setlocal shiftwidth=2
-	autocmd Filetype markdown setlocal expandtab
-	autocmd Filetype markdown setlocal spell spelllang=en_gb
-	autocmd Filetype markdown setlocal textwidth=80
-	autocmd Filetype markdown setlocal formatoptions=jtl
+    autocmd!
+    autocmd Filetype markdown setlocal tabstop=2
+    autocmd Filetype markdown setlocal shiftwidth=2
+    autocmd Filetype markdown setlocal expandtab
+    autocmd Filetype markdown setlocal spell spelllang=en_gb
+    autocmd Filetype markdown setlocal textwidth=80
+    autocmd Filetype markdown setlocal formatoptions=jtl
 augroup end
 
 augroup ruby_ft
-	autocmd!
-	autocmd Filetype ruby setlocal tabstop=2
-	autocmd Filetype ruby setlocal shiftwidth=2
-	autocmd Filetype ruby setlocal cc=90
-	autocmd Filetype ruby setlocal expandtab
+    autocmd!
+    autocmd Filetype ruby setlocal tabstop=2
+    autocmd Filetype ruby setlocal shiftwidth=2
+    autocmd Filetype ruby setlocal cc=90
+    autocmd Filetype ruby setlocal expandtab
 augroup end
 
 augroup sh_ft
-	autocmd!
-	autocmd Filetype sh setlocal tabstop=4
-	autocmd Filetype sh setlocal shiftwidth=4
-	autocmd Filetype sh setlocal expandtab
+    autocmd!
+    autocmd Filetype sh setlocal tabstop=4
+    autocmd Filetype sh setlocal shiftwidth=4
+    autocmd Filetype sh setlocal expandtab
 augroup end
 
 augroup commitmsg_ft
-	autocmd Filetype gitcommit setlocal spell spelllang=en_gb
-	autocmd Filetype gitcommit setlocal cc=72
+    autocmd!
+    autocmd Filetype gitcommit setlocal spell spelllang=en_gb
+    autocmd Filetype gitcommit setlocal cc=72
 augroup end
 
 augroup vim_ft
-	autocmd Filetype vim setlocal tabstop=4
-	autocmd Filetype vim setlocal shiftwidth=4
-	autocmd Filetype vim setlocal expandtab
+    autocmd!
+    autocmd Filetype vim setlocal tabstop=4
+    autocmd Filetype vim setlocal shiftwidth=4
+    autocmd Filetype vim setlocal expandtab
 augroup end
 
 augroup javascript_ft
-	autocmd!
-	autocmd Filetype javascript setlocal tabstop=2
-	autocmd Filetype javascript setlocal shiftwidth=2
-	autocmd Filetype javascript setlocal expandtab
+    autocmd!
+    autocmd Filetype javascript setlocal tabstop=2
+    autocmd Filetype javascript setlocal shiftwidth=2
+    autocmd Filetype javascript setlocal expandtab
+augroup end
+
+augroup cs_ft
+    autocmd!
+    autocmd Filetype cs setlocal tabstop=4
+    autocmd Filetype cs setlocal shiftwidth=4
+    autocmd Filetype cs setlocal expandtab
 augroup end
