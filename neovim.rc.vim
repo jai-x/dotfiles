@@ -41,6 +41,11 @@ set cursorcolumn
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set list
 
+" Enable code folding by syntax
+set foldmethod=indent
+set foldlevel=99
+set nofoldenable
+
 " Better split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
