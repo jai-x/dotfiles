@@ -55,7 +55,7 @@ export PS1="${BLUE}\w${RESET} \$(prompt_branch)\n\$(random_color)λ${RESET} "
 export PS2="> "
 
 # Command aliases
-alias ls="ls -G"
+alias ls="ls --color"
 alias ll="ls -lah"
 
 alias be="bundle exec"
