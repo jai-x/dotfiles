@@ -4,10 +4,15 @@
 # and also create a ~/.bash_work.sh file for work specific config/secrets
 
 # Import work config
-
 if [ -f "$HOME/.bash_work.sh" ]; then
     source "$HOME/.bash_work.sh"
 fi
+
+# Add user programs to the path
+if [ -d "$HOME/bin" ]; then
+    export PATH="$PATH;$$HOME/bin"
+fi
+
 
 # Editor preferences
 export VISUAL=nvim
