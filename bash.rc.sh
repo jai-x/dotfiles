@@ -59,7 +59,14 @@ export PS1="${BLUE}\w${RESET} \$(prompt_branch)\n\$(random_color)λ${RESET} "
 export PS2="> "
 
 # Command aliases
-alias ls="ls --color"
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    alias ls="ls --color"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    alias ls="ls -G"
+else
+    echo "Unknown `ls` auto color alias for this OS"
+fi
+
 alias ll="ls -lah"
 
 alias be="bundle exec"
