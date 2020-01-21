@@ -136,3 +136,27 @@ gll() {
             --date=relative \
             --all
 }
+
+# Commits out of sync between current branch and the supplied branch from origin
+# bd = branch diff
+bd() {
+    local branch
+    local commits
+
+    branch="${1}"
+
+    if [ -z "${branch}" ]; then
+        echo 'error: supply branch name as first argument'
+        return 1
+    fi
+
+    commits=($(git rev-list HEAD...origin/${branch} --left-right --count))
+
+    if [ -z "${commits}" ]; then
+        # the git command shows it's own error message
+        return 1
+    fi
+
+    echo "This branch is ${commits[0]} commits ahead," \
+         "${commits[1]} commits behind origin/${branch}."
+}
