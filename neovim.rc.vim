@@ -168,6 +168,13 @@ augroup javascript_ft
     autocmd Filetype javascript setlocal expandtab
 augroup end
 
+augroup json_ft
+    autocmd!
+    autocmd Filetype json setlocal tabstop=2
+    autocmd Filetype json setlocal shiftwidth=2
+    autocmd Filetype json setlocal expandtab
+augroup end
+
 augroup cs_ft
     autocmd!
     autocmd Filetype cs setlocal tabstop=4
