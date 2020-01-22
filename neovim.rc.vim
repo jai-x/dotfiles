@@ -77,6 +77,7 @@ Plug 'ervandew/supertab'         " tab completion
 Plug 'tpope/vim-fugitive'        " git wrapper
 Plug 'tpope/vim-rhubarb'         " allows vim-fugitive to directly browse to Github
 Plug 'jremmen/vim-ripgrep'       " ripgrep text search
+Plug 'pangloss/vim-javascript'   " better javascript highlighting
 call plug#end()
 
 " ---- Plugin configuration ----
