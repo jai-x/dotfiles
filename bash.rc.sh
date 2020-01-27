@@ -1,3 +1,5 @@
+#! /usr/bin/env bash
+
 # symlink this file to both:
 #  ~/.bash_profile
 #  ~/.bashrc
@@ -101,8 +103,12 @@ confirm() {
     esac
 }
 
-gp() {
+gpl() {
     git pull --all --prune
+}
+
+gps() {
+    git push
 }
 
 gpf() {
@@ -110,6 +116,11 @@ gpf() {
 }
 
 gc() {
+    if [ "$#" -gt 0 ]; then
+        git checkout $@
+        return 0
+    fi
+
     git --no-pager branch |
     fzf --height 10 --layout reverse-list --inline-info |
     xargs git checkout
