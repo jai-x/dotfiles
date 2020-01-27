@@ -51,11 +51,11 @@ prompt_branch() {
             DIRTY=" +"
         fi
 
-        echo "(${GREEN}${BRANCH}${DIRTY}${RESET}) "
+        echo "(${BRANCH}${DIRTY})"
     fi
 }
 
-export PS1="${BLUE}\w${RESET} \$(prompt_branch)\n\$(random_color)λ${RESET} "
+export PS1="\[${BLUE}\]\w\[${RESET}\] \[${GREEN}\]\$(prompt_branch)\[${RESET}\]\n\[${MAGENTA}\]λ\[${RESET}\] "
 export PS2="> "
 
 # Command aliases
