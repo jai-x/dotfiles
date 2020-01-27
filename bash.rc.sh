@@ -51,7 +51,17 @@ prompt_branch() {
             DIRTY=" +"
         fi
 
-        echo "(${BRANCH}${DIRTY})"
+        local NO_EMAIL=""
+        if [ -z "$(git config user.email 2>/dev/null)" ]; then
+            NO_EMAIL=" [no email]"
+        fi
+
+        local NO_NAME=""
+        if [ -z "$(git config user.name 2>/dev/null)" ]; then
+            NO_NAME=" [no name]"
+        fi
+
+        echo "(${BRANCH}${DIRTY}${NO_NAME}${NO_EMAIL})"
     fi
 }
 
