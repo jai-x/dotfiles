@@ -177,6 +177,13 @@ augroup json_ft
     autocmd Filetype json setlocal expandtab
 augroup end
 
+augroup css_ft
+    autocmd!
+    autocmd Filetype css setlocal tabstop=2
+    autocmd Filetype css setlocal shiftwidth=2
+    autocmd Filetype css setlocal expandtab
+augroup end
+
 augroup cs_ft
     autocmd!
     autocmd Filetype cs setlocal tabstop=4
