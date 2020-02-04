@@ -12,6 +12,7 @@ fi
 
 # Import work config
 if [ -f "$HOME/.bash_work.sh" ]; then
+    # shellcheck source=/dev/null
     source "$HOME/.bash_work.sh"
 fi
 
@@ -37,15 +38,9 @@ color_test() {
     echo "${WHITE}WHITE   WHITE   WHITE  ${RESET}"
 }
 
-random_color() {
-    local COLORS=($GREEN $RED $BLUE $MAGENTA $CYAN $WHITE)
-    local SIZE=${#COLORS[@]}
-    local INDEX=$(($RANDOM % $SIZE))
-    echo ${COLORS[$INDEX]}
-}
-
 prompt_branch() {
-    local BRANCH="$(git branch 2>/dev/null | awk '/\*/ { print $2 }')"
+    local BRANCH
+    BRANCH="$(git branch 2>/dev/null | awk '/\*/ { print $2 }')"
     if [ -n "$BRANCH" ]; then
 
         local DIRTY=""
@@ -76,7 +71,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias ls="ls -G"
 else
-    echo "Unknown `ls` auto color alias for this OS"
+    echo "Unknown 'ls' auto color alias for this OS"
 fi
 
 alias ll="ls -lah"
@@ -89,10 +84,10 @@ alias gd="git diff"
 
 # Custom commands
 
-# usage: confirm '<optional message>' && command to run after
+# usage: 'confirm && <command to run after>'
 confirm() {
     # call with a prompt string or use a default
-    read -r -p "${1:-Are you sure? [y/N]} " response
+    read -r -p "Are you sure? [y/N] " response
     case "$response" in
         [yY][eE][sS]|[yY])
             true
@@ -127,7 +122,8 @@ gc() {
 }
 
 gbd() {
-    local branch=$(
+    local branch
+    branch=$(
         git --no-pager branch |
         fzf --height 10 --layout reverse-list --inline-info |
         awk '{$1=$1};1'
@@ -171,9 +167,9 @@ bd() {
         return 1
     fi
 
-    commits=($(git rev-list HEAD...origin/${branch} --left-right --count))
+    read -r -a commits <<< "$(git rev-list HEAD...origin/"${branch}" --left-right --count)"
 
-    if [ -z "${commits}" ]; then
+    if [ -z "${commits[*]}" ]; then
         # the git command shows it's own error message
         return 1
     fi
