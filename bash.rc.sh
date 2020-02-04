@@ -108,7 +108,7 @@ gpl() {
 }
 
 gps() {
-    git push
+    git push "$@"
 }
 
 gpf() {
@@ -117,7 +117,7 @@ gpf() {
 
 gc() {
     if [ "$#" -gt 0 ]; then
-        git checkout $@
+        git checkout "$@"
         return 0
     fi
 
