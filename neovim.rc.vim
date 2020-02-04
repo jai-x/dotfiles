@@ -83,7 +83,7 @@ call plug#end()
 
 " ---- Plugin configuration ----
 
-" Best colorscheme 
+" Best colorscheme
 colorscheme monokai-phoenix
 
 " Stop showing mode as lightline.vim does this better
@@ -102,6 +102,9 @@ autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isT
 
 " NERDTree size
 let g:NERDTreeWinSize=35
+
+" Neomake run on buffer write
+call neomake#configure#automake('w')
 
 " ---- Filetype specific configuration ----
 
