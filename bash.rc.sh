@@ -160,7 +160,7 @@ bd() {
     local branch
     local commits
 
-    branch="${1}"
+    branch="$1"
 
     if [ -z "${branch}" ]; then
         echo 'error: supply branch name as first argument'
@@ -176,4 +176,12 @@ bd() {
 
     echo "This branch is ${commits[0]} commits ahead," \
          "${commits[1]} commits behind origin/${branch}."
+}
+
+rbserve() {
+    local port
+
+    port="${1:-9090}"
+
+    ruby -run -e -httpd . -p "$port"
 }
