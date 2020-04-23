@@ -33,6 +33,9 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 
+" Don't wrap text
+set nowrap
+
 " Highlight the line on column the cursor is on
 set cursorline
 set cursorcolumn
