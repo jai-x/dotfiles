@@ -83,6 +83,7 @@ Plug 'tpope/vim-rails'           " adds convienice projects for Rails projects g
 Plug 'jremmen/vim-ripgrep'       " ripgrep text search
 Plug 'pangloss/vim-javascript'   " better javascript highlighting
 Plug 'neomake/neomake'           " Async linting and job control
+Plug 'tikhomirov/vim-glsl'       " Syntax highlighting for GLSL
 call plug#end()
 
 " ---- Plugin configuration ----
@@ -102,7 +103,7 @@ let g:ctrlp_use_caching = 0 " ripgrep is fast enough to not need caching
 let g:ctrlp_mruf_relative = 1
 
 " Auto NERDTree close
-autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
 
 " NERDTree size
 let g:NERDTreeWinSize=35
@@ -203,4 +204,11 @@ augroup cs_ft
     autocmd Filetype cs setlocal tabstop=4
     autocmd Filetype cs setlocal shiftwidth=4
     autocmd Filetype cs setlocal expandtab
+augroup end
+
+augroup yaml_ft
+    autocmd!
+    autocmd Filetype yaml setlocal tabstop=2
+    autocmd Filetype yaml setlocal shiftwidth=2
+    autocmd Filetype yaml setlocal expandtab
 augroup end
