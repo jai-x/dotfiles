@@ -84,6 +84,7 @@ Plug 'jremmen/vim-ripgrep'       " ripgrep text search
 Plug 'pangloss/vim-javascript'   " better javascript highlighting
 Plug 'neomake/neomake'           " Async linting and job control
 Plug 'tikhomirov/vim-glsl'       " Syntax highlighting for GLSL
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 call plug#end()
 
 " ---- Plugin configuration ----
@@ -101,6 +102,7 @@ let g:ctrlp_use_caching = 0 " ripgrep is fast enough to not need caching
 
 " Show CtrlP MRU files relative to CWD
 let g:ctrlp_mruf_relative = 1
+let g:ctrlp_mruf_default_order = 1
 
 " Auto NERDTree close
 " autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
@@ -204,6 +206,7 @@ augroup cs_ft
     autocmd Filetype cs setlocal tabstop=4
     autocmd Filetype cs setlocal shiftwidth=4
     autocmd Filetype cs setlocal expandtab
+    autocmd Filetype cs setlocal cc=120
 augroup end
 
 augroup yaml_ft

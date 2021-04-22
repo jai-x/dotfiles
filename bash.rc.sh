@@ -20,50 +20,53 @@ fi
 export VISUAL=nvim
 export EDITOR=nvim
 
+# Boot the startship 🚀
+eval "$(starship init bash)"
+
 # Prompt setup
-GREEN="$(tput setaf 2)"
-RED="$(tput setaf 3)"
-BLUE="$(tput setaf 4)"
-MAGENTA="$(tput setaf 5)"
-CYAN="$(tput setaf 6)"
-WHITE="$(tput setaf 7)"
-RESET="$(tput sgr0)"
-
-color_test() {
-    echo "${GREEN}GREEN   GREEN   GREEN  ${RESET}"
-    echo "${RED}RED     RED     RED    ${RESET}"
-    echo "${BLUE}BLUE    BLUE    BLUE   ${RESET}"
-    echo "${MAGENTA}MAGENTA MAGENTA MAGENTA${RESET}"
-    echo "${CYAN}CYAN    CYAN    CYAN   ${RESET}"
-    echo "${WHITE}WHITE   WHITE   WHITE  ${RESET}"
-}
-
-prompt_branch() {
-    local BRANCH
-    BRANCH="$(git branch 2>/dev/null | awk '/\*/ { print $2 }')"
-    if [ -n "$BRANCH" ]; then
-
-        local DIRTY=""
-        if [ -n "$(git status --porcelain 2>/dev/null)" ]; then
-            DIRTY=" +"
-        fi
-
-        local NO_EMAIL=""
-        if [ -z "$(git config user.email 2>/dev/null)" ]; then
-            NO_EMAIL=" [no email]"
-        fi
-
-        local NO_NAME=""
-        if [ -z "$(git config user.name 2>/dev/null)" ]; then
-            NO_NAME=" [no name]"
-        fi
-
-        echo "(${BRANCH}${DIRTY}${NO_NAME}${NO_EMAIL})"
-    fi
-}
-
-export PS1="\[${BLUE}\]\w\[${RESET}\] \[${GREEN}\]\$(prompt_branch)\[${RESET}\]\n\[${MAGENTA}\]λ\[${RESET}\] "
-export PS2="> "
+# GREEN="$(tput setaf 2)"
+# RED="$(tput setaf 3)"
+# BLUE="$(tput setaf 4)"
+# MAGENTA="$(tput setaf 5)"
+# CYAN="$(tput setaf 6)"
+# WHITE="$(tput setaf 7)"
+# RESET="$(tput sgr0)"
+# 
+# color_test() {
+#     echo "${GREEN}GREEN   GREEN   GREEN  ${RESET}"
+#     echo "${RED}RED     RED     RED    ${RESET}"
+#     echo "${BLUE}BLUE    BLUE    BLUE   ${RESET}"
+#     echo "${MAGENTA}MAGENTA MAGENTA MAGENTA${RESET}"
+#     echo "${CYAN}CYAN    CYAN    CYAN   ${RESET}"
+#     echo "${WHITE}WHITE   WHITE   WHITE  ${RESET}"
+# }
+# 
+# prompt_branch() {
+#     local BRANCH
+#     BRANCH="$(git branch 2>/dev/null | awk '/\*/ { print $2 }')"
+#     if [ -n "$BRANCH" ]; then
+# 
+#         local DIRTY=""
+#         if [ -n "$(git status --porcelain 2>/dev/null)" ]; then
+#             DIRTY=" +"
+#         fi
+# 
+#         local NO_EMAIL=""
+#         if [ -z "$(git config user.email 2>/dev/null)" ]; then
+#             NO_EMAIL=" [no email]"
+#         fi
+# 
+#         local NO_NAME=""
+#         if [ -z "$(git config user.name 2>/dev/null)" ]; then
+#             NO_NAME=" [no name]"
+#         fi
+# 
+#         echo "(${BRANCH}${DIRTY}${NO_NAME}${NO_EMAIL})"
+#     fi
+# }
+# 
+# export PS1="\[${BLUE}\]\w\[${RESET}\] \[${GREEN}\]\$(prompt_branch)\[${RESET}\]\n\[${MAGENTA}\]λ\[${RESET}\] "
+# export PS2="> "
 
 # Command aliases
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
