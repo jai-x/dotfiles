@@ -21,6 +21,9 @@ For config `fish`:
 * [fish](https://fishshell.com/)
 * [starship](https://starship.rs/)
 
+For config `karabiner`:
+* [karabiner-elements](https://karabiner-elements.pqrs.org/)
+
 ### Installation
 
 Use `stow` to link each programs config with the home directory as the target.
