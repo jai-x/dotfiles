@@ -1,10 +1,5 @@
 #! /usr/bin/env bash
 
-# symlink this file to both:
-#  ~/.bash_profile
-#  ~/.bashrc
-# and also create a ~/.bash_work.sh file for work specific config/secrets
-
 # Add user programs to the path
 if [ -d "$HOME/bin" ]; then
     export PATH="$PATH:$HOME/bin"

@@ -1,5 +1,3 @@
-" symlink this file to ~/.config/nvim/init.vim
-
 " ---- Basic neovim config ----
 
 " Don't scroll cursor to edges
@@ -84,6 +82,7 @@ Plug 'jremmen/vim-ripgrep'       " ripgrep text search
 Plug 'pangloss/vim-javascript'   " better javascript highlighting
 Plug 'neomake/neomake'           " Async linting and job control
 Plug 'tikhomirov/vim-glsl'       " Syntax highlighting for GLSL
+Plug 'dag/vim-fish'              " Syntax highlighting for fish shell
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 call plug#end()
 
