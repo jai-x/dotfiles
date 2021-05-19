@@ -5,6 +5,10 @@ set -U fish_greeting
 set -x VISUAL nvim
 set -x EDITOR nvim
 
+if test -e ~/.config/fish/specific.fish
+	source ~/.config/fish/specific.fish
+end
+
 # Boot the starship 🚀
 if type -q starship
 	starship init fish | source
