@@ -77,12 +77,11 @@ Plug 'scrooloose/nerdtree'       " file nav split
 Plug 'ervandew/supertab'         " tab completion
 Plug 'tpope/vim-fugitive'        " git wrapper
 Plug 'tpope/vim-rhubarb'         " allows vim-fugitive to directly browse to Github
-Plug 'tpope/vim-rails'           " adds convienice projects for Rails projects gf, :R, :A
 Plug 'jremmen/vim-ripgrep'       " ripgrep text search
 Plug 'pangloss/vim-javascript'   " better javascript highlighting
 Plug 'neomake/neomake'           " Async linting and job control
-Plug 'tikhomirov/vim-glsl'       " Syntax highlighting for GLSL
 Plug 'dag/vim-fish'              " Syntax highlighting for fish shell
+Plug 'elixir-editors/vim-elixir' " Syntax highlighting for elixir
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 call plug#end()
 
