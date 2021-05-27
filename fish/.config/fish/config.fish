@@ -5,6 +5,12 @@ set -U fish_greeting
 set -x VISUAL nvim
 set -x EDITOR nvim
 
+# Add custom programs
+if test -d "$HOME/bin"
+	fish_add_path "$HOME/bin"
+end
+
+# Add machine specific config
 if test -e ~/.config/fish/specific.fish
 	source ~/.config/fish/specific.fish
 end
@@ -22,10 +28,3 @@ if test -e ~/.asdf/asdf.fish
 else
 	echo 'asdf is not installed, please install asdf'
 end
-
-# Add custom programs
-if test -d "$HOME/bin"
-	fish_add_path "$HOME/bin"
-end
-
-
