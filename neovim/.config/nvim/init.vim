@@ -213,3 +213,10 @@ augroup yaml_ft
     autocmd Filetype yaml setlocal shiftwidth=2
     autocmd Filetype yaml setlocal expandtab
 augroup end
+
+augroup fish_ft
+    autocmd!
+    autocmd Filetype fish setlocal tabstop=2
+    autocmd Filetype fish setlocal shiftwidth=2
+    autocmd Filetype fish setlocal expandtab
+augroup end
