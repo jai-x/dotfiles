@@ -28,3 +28,8 @@ if test -e ~/.asdf/asdf.fish
 else
 	echo 'asdf is not installed, please install asdf'
 end
+
+# Ensure fzf is present
+if not type -q fzf
+  echo 'fzf is not installed, please install fzf'
+end

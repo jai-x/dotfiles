@@ -21,6 +21,7 @@ For config `fish`:
 * [fish](https://fishshell.com/)
 * [starship](https://starship.rs/)
 * [asdf](https://asdf-vm.com/)
+* [fzf](https://github.com/junegunn/fzf)
 
 For config `karabiner`:
 * [karabiner-elements](https://karabiner-elements.pqrs.org/)
