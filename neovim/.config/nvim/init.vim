@@ -220,3 +220,10 @@ augroup fish_ft
     autocmd Filetype fish setlocal shiftwidth=2
     autocmd Filetype fish setlocal expandtab
 augroup end
+
+augroup xml_ft
+    autocmd!
+    autocmd Filetype xml setlocal tabstop=2
+    autocmd Filetype xml setlocal shiftwidth=2
+    autocmd Filetype xml setlocal expandtab
+augroup end
