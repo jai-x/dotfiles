@@ -77,6 +77,7 @@ Plug 'scrooloose/nerdtree'       " file nav split
 Plug 'ervandew/supertab'         " tab completion
 Plug 'tpope/vim-fugitive'        " git wrapper
 Plug 'tpope/vim-rhubarb'         " allows vim-fugitive to directly browse to Github
+Plug 'tommcdo/vim-fubitive'      " allows vim-fugitive to directly browse to BitBucket
 Plug 'jremmen/vim-ripgrep'       " ripgrep text search
 Plug 'pangloss/vim-javascript'   " better javascript highlighting
 Plug 'neomake/neomake'           " Async linting and job control
