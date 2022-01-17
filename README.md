@@ -20,7 +20,7 @@ For config `bash`:
 For config `fish`:
 * [fish](https://fishshell.com/)
 * [starship](https://starship.rs/)
-* [asdf](https://asdf-vm.com/)
+* [asdf](https://asdf-vm.com/) (Always install manually via git as packaged versions are often broken)
 * [fzf](https://github.com/junegunn/fzf)
 
 For config `karabiner`:
