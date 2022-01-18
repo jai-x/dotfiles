@@ -87,6 +87,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " :Mar
 Plug 'pangloss/vim-javascript'   " Javascript HL
 Plug 'dag/vim-fish'              " Fish shell HL
 Plug 'elixir-editors/vim-elixir' " Elixir HL
+Plug 'tpope/vim-rails'           " Rails HL + navigation (:A :R gf)
 " Auto-completion
 Plug 'neovim/nvim-lspconfig'     " Neovim LSP config manager
 Plug 'hrsh7th/nvim-compe'        " Autocomplete to hook into neovim LSP
