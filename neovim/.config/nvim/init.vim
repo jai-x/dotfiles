@@ -73,19 +73,23 @@ set completeopt=menuone,noselect
 
 " Setup vim plug and get plugins
 call plug#begin('~/.config/nvim/vim_plug')
+" Theme
 Plug 'Reewr/vim-monokai-phoenix' " color scheme
-Plug 'itchyny/lightline.vim'     " better status bar
-Plug 'ctrlpvim/ctrlp.vim'        " file search
-Plug 'scrooloose/nerdtree'       " file nav split
-Plug 'tpope/vim-fugitive'        " git wrapper
-Plug 'tpope/vim-rhubarb'         " allows vim-fugitive to directly browse to Github
-Plug 'jremmen/vim-ripgrep'       " ripgrep text search
-Plug 'pangloss/vim-javascript'   " better javascript highlighting
-Plug 'dag/vim-fish'              " Syntax highlighting for fish shell
-Plug 'elixir-editors/vim-elixir' " Syntax highlighting for elixir
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-Plug 'neovim/nvim-lspconfig'     " Config extension for neovim lsp support
-Plug 'hrsh7th/nvim-compe'        " Auto completion that hooks into lsp
+" Util
+Plug 'itchyny/lightline.vim'     " Better status bar
+Plug 'ctrlpvim/ctrlp.vim'        " File finder
+Plug 'scrooloose/nerdtree'       " :NERDTree
+Plug 'tpope/vim-fugitive'        " :G <git-command>
+Plug 'tpope/vim-rhubarb'         " :G browse opens Github in browser
+Plug 'jremmen/vim-ripgrep'       " :Rg ripgrep text search
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " :MarkdownPreview
+" Lanaguage specific
+Plug 'pangloss/vim-javascript'   " Javascript HL
+Plug 'dag/vim-fish'              " Fish shell HL
+Plug 'elixir-editors/vim-elixir' " Elixir HL
+" Auto-completion
+Plug 'neovim/nvim-lspconfig'     " Neovim LSP config manager
+Plug 'hrsh7th/nvim-compe'        " Autocomplete to hook into neovim LSP
 call plug#end()
 
 " ---- Plugin configuration ----
