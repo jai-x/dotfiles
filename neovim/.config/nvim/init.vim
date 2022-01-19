@@ -116,9 +116,6 @@ let g:ctrlp_mruf_default_order = 1
 " NERDTree size
 let g:NERDTreeWinSize=35
 
-" Neomake run on buffer write
-" call neomake#configure#automake('w')
-
 " Neovim LSP
 lua << EOF
 local pid = vim.fn.getpid()
