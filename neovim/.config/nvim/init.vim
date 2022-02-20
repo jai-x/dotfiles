@@ -79,7 +79,7 @@ Plug 'ctrlpvim/ctrlp.vim'        " file search
 Plug 'scrooloose/nerdtree'       " file nav split
 Plug 'tpope/vim-fugitive'        " git wrapper
 Plug 'tpope/vim-rhubarb'         " allows vim-fugitive to directly browse to Github
-Plug 'tommcdo/vim-fubitive'      " allows vim-fugitive to directly browse to BitBucket
+Plug 'tpope/vim-sleuth'          " auto-detect indent settings
 Plug 'jremmen/vim-ripgrep'       " ripgrep text search
 Plug 'pangloss/vim-javascript'   " better javascript highlighting
 Plug 'dag/vim-fish'              " Syntax highlighting for fish shell
@@ -222,13 +222,6 @@ augroup terminal_ft
     autocmd TermOpen * setlocal scrolloff=0
 augroup end
 
-augroup python_ft
-    autocmd!
-    autocmd Filetype python setlocal tabstop=4
-    autocmd Filetype python setlocal shiftwidth=4
-    autocmd Filetype python setlocal expandtab
-augroup end
-
 augroup markdown_ft
     autocmd!
     autocmd Filetype markdown setlocal tabstop=2
@@ -241,17 +234,7 @@ augroup end
 
 augroup ruby_ft
     autocmd!
-    autocmd Filetype ruby setlocal tabstop=2
-    autocmd Filetype ruby setlocal shiftwidth=2
     autocmd Filetype ruby setlocal cc=90
-    autocmd Filetype ruby setlocal expandtab
-augroup end
-
-augroup sh_ft
-    autocmd!
-    autocmd Filetype sh setlocal tabstop=4
-    autocmd Filetype sh setlocal shiftwidth=4
-    autocmd Filetype sh setlocal expandtab
 augroup end
 
 augroup commitmsg_ft
@@ -260,66 +243,7 @@ augroup commitmsg_ft
     autocmd Filetype gitcommit setlocal cc=72
 augroup end
 
-augroup vim_ft
-    autocmd!
-    autocmd Filetype vim setlocal tabstop=4
-    autocmd Filetype vim setlocal shiftwidth=4
-    autocmd Filetype vim setlocal expandtab
-augroup end
-
-augroup javascript_ft
-    autocmd!
-    autocmd Filetype javascript setlocal tabstop=2
-    autocmd Filetype javascript setlocal shiftwidth=2
-    autocmd Filetype javascript setlocal expandtab
-augroup end
-
-augroup json_ft
-    autocmd!
-    autocmd Filetype json setlocal tabstop=2
-    autocmd Filetype json setlocal shiftwidth=2
-    autocmd Filetype json setlocal expandtab
-augroup end
-
-augroup html_ft
-    autocmd!
-    autocmd Filetype html setlocal tabstop=2
-    autocmd Filetype html setlocal shiftwidth=2
-    autocmd Filetype html setlocal expandtab
-augroup end
-
-augroup css_ft
-    autocmd!
-    autocmd Filetype css setlocal tabstop=2
-    autocmd Filetype css setlocal shiftwidth=2
-    autocmd Filetype css setlocal expandtab
-augroup end
-
 augroup cs_ft
     autocmd!
-    autocmd Filetype cs setlocal tabstop=4
-    autocmd Filetype cs setlocal shiftwidth=4
-    autocmd Filetype cs setlocal expandtab
     autocmd Filetype cs setlocal cc=120
-augroup end
-
-augroup yaml_ft
-    autocmd!
-    autocmd Filetype yaml setlocal tabstop=2
-    autocmd Filetype yaml setlocal shiftwidth=2
-    autocmd Filetype yaml setlocal expandtab
-augroup end
-
-augroup fish_ft
-    autocmd!
-    autocmd Filetype fish setlocal tabstop=2
-    autocmd Filetype fish setlocal shiftwidth=2
-    autocmd Filetype fish setlocal expandtab
-augroup end
-
-augroup xml_ft
-    autocmd!
-    autocmd Filetype xml setlocal tabstop=2
-    autocmd Filetype xml setlocal shiftwidth=2
-    autocmd Filetype xml setlocal expandtab
 augroup end
