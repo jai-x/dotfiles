@@ -84,7 +84,8 @@ Plug 'tpope/vim-rhubarb'         " :G browse opens Github in browser
 Plug 'jremmen/vim-ripgrep'       " :Rg ripgrep text search
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " :MarkdownPreview
 " Lanaguage specific
-Plug 'pangloss/vim-javascript'   " Javascript HL
+Plug 'yuezk/vim-js'              " Javascript HL
+Plug 'maxmellon/vim-jsx-pretty'  " JSX HL
 Plug 'dag/vim-fish'              " Fish shell HL
 Plug 'elixir-editors/vim-elixir' " Elixir HL
 Plug 'tpope/vim-rails'           " Rails HL + navigation (:A :R gf)
